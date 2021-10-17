@@ -1,0 +1,103 @@
+html {
+  margin: 0 4rem;
+}
+
+body {
+  text-align: center;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: #1d1f20;
+  background-attachment: fixed;
+  background-size: cover;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+  h1,
+  h2 {
+    -webkit-text-stroke: 0.2px black;
+  }
+}
+
+button {
+  color: white;
+  padding: 15px 20px;
+  font-size: larger;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  margin: 0 25px;
+}
+
+/* button:hover {
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+  border: 0.2px solid rgba(255, 255, 255, 0.5);
+  transition: all 200ms ease-in-out;
+} */
+
+button:hover {
+  background-image: -webkit-linear-gradient(92deg, #f35626c9, #feac3acc);
+  -webkit-animation: hue 10s infinite linear;
+  color: #525252;
+}
+
+.grad {
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+}
+
+.grad-button {
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+.container {
+  padding: 100px;
+  margin-top: 105px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.358);
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0px 500px 2000px rgba(255, 255, 255, 0.235);
+  filter: blur(50px);
+  margin: -20px;
+}
